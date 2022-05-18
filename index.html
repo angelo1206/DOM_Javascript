@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Nombre de la pagina  -->
+  <title>DOM JAVASCRIPT</title>
+  <!-- conexion con el css3 -->
+  <link rel="stylesheet" href="estilos_dom.css">
+  <!-- conexion con el javascript -->
+  <script src="pruebas_dom.js" ></script>
+</head>
+
+<body>
+  <!-- tilulo de mi pagina -->
+  <h2>Ejemplo de DOM</h2>
+  <!-- creamos un campo con fieldset para agregar contenido por cubiculos -->
+  <fieldset>
+    <h1>Ejemplo prueba de conexion</h1>
+    <span>conexion <b>Dom</b>:</span>
+    <p id="demo1"></p>
+  </fieldset><br><br>
+
+  <!-- Ejemplo de como encontrar el elemento con id -->
+  <fieldset>
+    <h1>Ejemplo de como encontrar el elemento con id</h1>
+    <span>en este ejemplo vamos a encotrar el elemento con <b>id</b>:</span>
+    <p style="color:blue" id="intro">este es el elemento HTML id</p>
+    <p id="demo2"></p>
+  </fieldset><br><br>
+
+  <!-- Ejemplo Búsqueda de elementos HTML por nombre de etiqueta -->
+  <fieldset>
+    <h1>Búsqueda de elementos HTML por nombre de etiqueta</h1>
+    <span>demostracion de Búsqueda de etiqueta Tag Name <b>getElementsByTagName</b>:  </span>
+    <h3>demo</h3>
+    <p id="demo3"></p>
+  </fieldset><br><br>
+
+  <!-- ejemplo encuentra el elemento con id="main"y luego encuentra todos los <p>elementos dentro "main": -->
+  <fieldset>
+    <h1>ejemplo encuentra el elemento con id="main"</h1>
+    <div id="main">
+      <h4 style="color:blue">parrafo 1 con etiqueta Tag Name</h4>
+      <h4 style="color:blue">parrafo 2 este es el ejemplo de demostracion de getElementsByTagName method dentro de un div id main : </h4>
+    </div>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+  </fieldset><br><br>
+
+  <!-- Encontrar elementos HTML por nombre de clase : getElementsByClassName-->
+  <fieldset>
+    <h1>Ejemplo de Encontrar elementos HTML por nombre de clase : getElementsByClassName</h1>
+    <span>encontrar elementos por clase <b>getElementsByClassName :</b></span>
+    <p style="color:blue" class="intro">Hola mundo!!</p>
+    <p style="color:blue" class="intro">este es el ejemplo de demostracion de getElementsByClassName.</p>
+    <p id="demo6"></p
+  </fieldset><br><br>
+
+  <!-- Ejemplo de búsqueda de elementos HTML mediante selectores de CSS con querySelectorAll() -->
+  <fieldset>
+    <h1>Ejemplo de búsqueda de elementos HTML mediante selectores de CSS con querySelectorAll()</h1>
+    <span>Ejemplo de busqueda con <b>querySelectorAll()</b> </span>
+    <p style="color:blue" class="intro2">hola programador</p>
+    <p style="color:blue" class="intro2">este es el ejemplo de demostracion con querySelectorAll()</p>
+    <p id="demo7"></p>
+  </fieldset><br><br>
+
+  <!-- Ejemplo de Cambiar el valor de un atributo de una imagen -->
+  <fieldset>
+    <h1>Ejemplo de Cambiar el valor de un atributo de una imagen</h1>
+    <span>Este ejemplo cambia el valor del atributo src de un img gif a un jpg elemento:</span><br><br>
+    <img id="imagen"src="leon_rugiendo.gif" width="100" height="100">
+    <p>la imagen original es un gif <img src="leon_rugiendo.gif" width="160" height="120"> y se cambio por jpg <img src="leon.jpg" width="100" height="100"</p>
+  </fieldset><br><br>
+
+  <!-- Ejemplo de cambio de estilo con DOM -->
+  <fieldset>
+    <h1>Ejemplo de cambio de estilo con DOM</h1>
+    <span>cambio del HTML con DOM</span>
+    <p id="p1">Hola programador</p>
+    <p id="p2">Hola programador</p>
+  </fieldset><br><br>
+
+  <!-- Ejemplo de uso de eventos -->
+  <!-- en este ejemplo vamos a cambiar el color de rosado que tiene la etiqueta h5 a color rojo -->
+  <fieldset>
+    <h1>Ejemplo de uso de eventos</h1>
+    <h5 style="color:pink" id="id1">hola no me gusta el color que tengo puedes cambiarlo ??</h5>
+    <button type="button"
+     onclick="document.getElementById('id1').style.color = 'red' ">quieres cambiar el color del titulo dale click aqui</button>
+  </fieldset><br><br>
+
+  <!-- Ejemplo de Animaciones en javascript -->
+  <fieldset>
+    <h1>Ejemplo de Animaciones en javascript con DOM</h1>
+    <span>quieres que el cuadro rojo se mueva dale click en el boton</span><br><br>
+    <button onclick="myMove()">Click Me</button><br><br>
+    <div id="contenedor">
+      <div id="animate"></div>
+    </div>
+    <script>
+      function myMove(){
+        let id =null;
+        const elem = document.getElementById("animate");
+        let pos = 0;
+        clearInterval(id);
+        id = setInterval(frame, 5);
+        function frame(){
+          if (pos == 350){
+            clearInterval(id);
+          } else {
+            pos++;
+            elem.style.top = pos + "px";
+            elem.style.left = pos + "px";
+          }
+        }
+      }
+
+    </script>
+  </fieldset><br><br>
+
+  <!-- Ejemplo de eventos DOM -->
+  <fieldset>
+    <h1>Ejemplo de eventos DOM</h1>
+    <h3 style="color:red" onclick="this.innerHTML = 'TE AMO DEMASIADO!!!'" >click aqui si quieres que te diga algo</h3>
+  </fieldset><br><br>
+
+  <!-- Ejemplo de Event Listener -->
+  <fieldset>
+    <h1>Ejemplo de Event Listener</h1>
+    <span>Esto es un ejemplo de uso de addEventListener():</span><br><br>
+    <button id="miboton">Click aqui</button>
+    <p id="demo8"></p>
+
+  <!-- segundo ejemplo de EventListener   -->
+    <span>En este ejemplo hacemos un mensaje de alerta de pagina:</span><br><br>
+    <button id="miboton2">Click para informarte algo</button><br><br>
+
+  <!-- Tercer ejemplo de EventListener -->
+    <span>En este  ejemplo usamos varios mensajes de alerta a la pagina :</span><br><br>
+    <button id="miboton3">Informate dale click aqui</button>
+  </fieldset><br><br>
+
+  <!-- Ejemplo de Event Listener mas ejemplos -->
+  <fieldset>
+    <h1>Ejemplo de Event Listener interactivo</h1>
+    <span>puedo saber tus movimientos quieres probar !!!</span><br><br>
+    <button id="miboton4">Click</button>
+    <p id="demo9"></p>
+  </fieldset><br><br>
+
+  <!-- Ejemplo de Navigation DOM -->
+  <fieldset>
+    <h1>Ejemplo de Navigation DOM</h1>
+    <span>Ejemplo de como copiar una etiqueta h3 a una  etiqueta p :</span>
+    <p>hola soy la etiqueta h3</p>
+    <p>hola soy la etiqueta p</p>
+    <span>resultado la etiqueta h3 remplaza el texto de la etiqueta p :</span>
+    <h3 id="nav1">hola soy la etiqueta h3</h3>
+    <p id="nav2">hola soy la etiqueta p</p>
+    <p></p>
+  </fieldset><br><br>
+
+  <!-- Ejemplo de Nodes DOM -->
+  <fieldset>
+    <h1>Ejemplo de Nodes DOM</h1>
+    <span>Esto es un ejemplo de como agregar un parrafo despues de crear algunos :</span>
+    <p>hola soy el primer parrafo</p>
+    <p>hola soy el segundo parrafo</p>
+    <span>resultado agregamos un nuevo parrafo :</span>
+
+    <div id="div1">
+      <p id="p1">hola soy el primer parrafo</p>
+      <p id="p2">hola soy el segundo parrafo</p>
+    </div><br><br>
+    <h2>Ejemplo de como eliminar un elemento con Nodos DOM con <b>remove()</b></h2>
+    <span>Vamos a eliminar un parrafo con un boton :</span>
+    <div>
+      <p id="p3">hola soy el primer parrafo</p>
+      <p id="p4">hola soy el segundo parrafo</p>
+    </div>
+    <button onclick="borrar()">borrar el primer parrafo</button>
+    <script>
+      function borrar() {
+        document.getElementById("p3").remove();
+      }
+    </script>
+    <h2>Ejemplo de como remplazar un elemento con Nodos DOM con <b>replaceChild()</b></h2>
+    <span></span>
+    <div>
+      <p>hola soy el primer parrafo</p>
+      <p>hola soy el segundo parrafo</p>
+    </div>
+    <span>Vamos a remplazar el primer parrafo :</span>
+    <div id="div2">
+      <p id="p5">hola soy el primer parrafo</p>
+      <p id="p6">hola soy el segundo parrafo</p>
+    </div>
+  </fieldset><br><br>
+
+  <!-- Ejemplo de collections DOM -->
+  <fieldset>
+    <h1>Ejemplo de collections DOM</h1>
+    <span>Vamos a seleccionar todas las etiquetas <b>p</b> y le ponemos color amarillo a todas las etiquetas <b>p</b> :</span>
+    <p>Hello World!</p>
+
+<p>Hello Norway!</p>
+
+<p>Click the button to change the color of all p elements.</p>
+
+<button onclick="cambiar_Color()">Click para cambiar el color de la letra</button>
+
+<script>
+  function cambiar_Color() {
+    const iteraccion = document.getElementsByTagName("p");
+    for (let i = 0; i < iteraccion.length; i++) {
+      iteraccion[i].style.color = "yellow";
+    }
+  }
+</script>
+</fieldset><br><br>
+
+<!-- Ejemplo Browser BOM en javascript -->
+<fieldset>
+  <h1>Ejemplo Browser BOM en javascript Location</h1>
+  <span>Ejemplo de <b>Location</b> donde nos vamos a redicionar a otra pagina con un boton</span><br>
+  <input style="background:yellow" type="button"  value="cargar una nueva pagina" onclick="newDoc()">
+
+<script>
+  function newDoc(){
+    window.location.assign("https://www.youtube.com")
+  }
+</script>
+</fieldset><br><br>
+
+<!-- Ejemplo de Navigator BOM en javascript -->
+<fieldset>
+  <h1>Ejemplo de Navigator BOM en javascript</h1>
+  <span>Vamos hacer un ejemplo con <b>Navigator</b> para que nos de informacion del navegador que estamos utlizando :</span>
+  <p id="demo10"></p>
+
+  <script>
+    document.getElementById("demo10").innerHTML = "navigador.appCodeName es " + navigator.appCodeName;
+  </script>
+  <span>nos da de resultado mozilla pero es el nombre clave de chrome.</span>
+</fieldset><br><br>
+
+<!-- Ejemplo de Popup Alert BOM en javascript -->
+<fieldset>
+  <h1>Ejemplo de Popup Alert BOM en javascript</h1>
+  <span>En este ejemplo vamos a crear alertas si se acepta vamos por el camino de true y si cancelamos vamos por el camino false:</span><br><br>
+  <button onclick="opcion()">Click y escoje una opcion</button>
+  <p id="demo11"></p>
+
+  <script>
+    function opcion (){
+      var txt;
+      if (confirm("presiona tu opcion")){
+        txt = "has eligido ok";
+      } else {
+        txt = "has presionado cancelar";
+      }
+      document.getElementById("demo11").innerHTML = txt;
+    }
+  </script>
+</fieldset><br><br>
+
+
+
+
+
+
+</body>
+</html>
